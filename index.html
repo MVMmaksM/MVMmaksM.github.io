@@ -5,19 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/png" href="icons/icon-home.png">
 </head>
 <body>
 
     <header>
         <nav>
             <div class="nav-logo">MVMmaksM</div>
-            <div class="nav-links">
-                <a href="#main">Главная</a>
-                <a href="#about">Обо мне</a>
-                <a href="#skills">Навыки</a>
-                <a href="#projects">Проекты</a>
-                <a href="#contact">Контакты</a>
+     
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+          
+            <div class="nav-menu">
+                <div class="nav-links">
+                    <a href="#main">Главная</a>
+                    <a href="#about">Обо мне</a>
+                    <a href="#skills">Навыки</a>
+                    <a href="#projects">Проекты</a>
+                    <a href="#contact">Контакты</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -55,7 +65,7 @@
                     </p>
                 </div>
                 <div class="about-image">                   
-                    <img src="photo.jpg" alt="Фотография">
+                    <img src="img/photo.jpg" alt="Фотография">
                 </div>
             </div>
         </div>
@@ -176,26 +186,7 @@
         </div>
     </footer>
 
-    <script>        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return; 
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                  window.scrollTo({
-                    top: targetElement.offsetTop - 70, 
-                    behavior: 'smooth'
-                  });
-                }
-            });
-        });
-        
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
+    <script src="js/index.js"></script>
 
 </body>
 </html>
