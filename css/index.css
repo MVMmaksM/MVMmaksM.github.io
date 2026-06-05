@@ -121,13 +121,23 @@ nav {
     transition: background-color 0.3s ease, transform 0.2s ease;
     border: none;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1em;    
 }
 
 .btn:hover {            
     background-color:  #452266;
     transform: scale(1.05);            
-}      
+} 
+
+.project-info a {
+    text-decoration: none;
+    color: white;
+}
+
+.project-info a:hover {
+    text-decoration: none;
+    color: #489bbe;
+}     
 
 .container {
     max-width: 1200px;
